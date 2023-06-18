@@ -29,3 +29,57 @@ minikube status
 ```
 kubectl get node
 ```
+
+# 4. Running applications
+
+- **Apply manages application through files defining K8s resources**
+
+```
+kubectl apply -f mongo-config.yaml
+kubectl apply -f mongo-secret.yaml
+kubectl apply -f mongo.yaml
+kubectl apply -f webapp.yaml
+```
+
+- **Get all components in cluster**
+
+```
+kubectl get all
+```
+
+- **Get config map & secret**
+
+```
+kubectl get configmap
+kubectl get secret
+```
+
+- **See more detail about the certain component**
+
+```
+kubectl describe service webapp-service
+kubectl describe pod webapp-deployment-6897cdc4c7-6l49c
+```
+
+- **Checking log**
+
+```
+kubectl logs webapp-deployment-6897cdc4c7-6l49c
+```
+
+- **Get services**
+
+```
+kubectl get svc
+```
+
+- **Get ip of minikube**
+
+```
+minikube ip
+kubectl get node -o wide # wide output
+```
+
+# 5. Reference
+
+- https://www.youtube.com/watch?v=s_o8dwzRlu4
